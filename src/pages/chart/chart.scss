@@ -1,0 +1,10 @@
+page-chart {
+        $red-background:#cac7c7;
+        .item {
+          background-color: darken($red-background, 1.5%);
+          font:blue;
+          box-shadow: 3px 10px 16px 0px;
+          border-radius:10px 10px 10px 10px;
+
+        }
+}
