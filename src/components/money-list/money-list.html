@@ -1,0 +1,36 @@
+<!-- Generated template for the MoneyListComponent component -->
+<ion-content>
+<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<ion-list>
+        <ion-item-group *ngFor="let item of groupList|group">
+                <ion-item-divider color="light">
+                        <h3>
+                                <font color=black>{{item.key|date}}</font>
+                        </h3>
+                </ion-item-divider>
+                <ion-item *ngFor="let subItem of item.value">
+                        <ion-row>
+                                <ion-col col-lg-4>
+                                   <font color=blue>{{subItem.value.productId}}</font>
+                                </ion-col>
+                                <ion-col col-lg-4>
+                                <font>{{subItem.value.cost|currency}} </font>
+                                </ion-col>
+                                <ion-col col-lg-4>
+                                        <button ion-button icon-right color="danger"  round (click)="doDelete(subItem.value.id)">
+                                                        刪除 
+                                                <ion-icon name="md-trash"></ion-icon>
+                                        </button>
+                                        <!-- <button ion-button color="danger" 
+                                        small  
+                                        round (click)="doDelete(subItem.value.id)">刪除
+                                </button> -->
+                                </ion-col>
+                        </ion-row>
+                </ion-item>
+        </ion-item-group>
+       <h1><font color=red>總額<input type="hidden" [(ngModel)]="sumCost"> {{sumCost}}</font></h1>
+     <p>{{testList|json}}</p>
+</ion-list>
+</ion-content>
+
