@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import {ChartPage} from '../pages/chart/chart';
+import { IncomePage } from '../pages/income/income';
 
 @Component({
   templateUrl: 'app.html'
@@ -22,7 +23,8 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: '首頁', component: HomePage,icon:'ios-create-outline' },
+      { title: '支出', component: HomePage,icon:'ios-create-outline' },
+      { title: '收入', component: IncomePage,icon:'md-stats' },
       { title: '歷史記錄', component: ListPage ,icon:'ios-document-outline'},
       { title: '圖表', component: ChartPage,icon:'md-stats' }
     ];

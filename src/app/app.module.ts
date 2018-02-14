@@ -8,6 +8,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { ChartPage } from '../pages/chart/chart';
+import { IncomePage } from '../pages/income/income';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MoneyServiceProvider } from '../providers/money-service/money-service';
@@ -32,7 +34,8 @@ export const firebaseConfig = {
     ListPage,
     ChartPage,
     MoneyListComponent,
-    GroupByPipe
+    GroupByPipe,
+    IncomePage,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ export const firebaseConfig = {
     HomePage,
     ListPage,
     ChartPage,
+    IncomePage,
     MoneyListComponent
   ],
   providers: [
