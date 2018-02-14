@@ -33,7 +33,10 @@ export class IncomePage {
     this.obserItem.subscribe(x=>{
       this.items=x;
       this.doSum(this.items);
+      console.log(this.items);
     });
+
+    
   }
 
 

@@ -15,7 +15,7 @@ export class IncomeServiceProvider {
   items: Observable<any[]>;
 
   constructor(public afs: AngularFirestore) {
-    this.itemCollections = this.afs.collection('income', ref => ref.orderBy('costDate'));
+    this.itemCollections = this.afs.collection('income', ref => ref.orderBy('revenueDate'));
     this.items = this.itemCollections.valueChanges();
   }
 
