@@ -17,6 +17,7 @@ import {MoneyListComponent} from '../components/money-list/money-list';
 import { GroupByPipe } from '../pipes/group-by/group-by';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { IncomeServiceProvider } from '../providers/income-service/income-service';
 // AF2 Settings
 export const firebaseConfig = {
   apiKey: "AIzaSyDU-xMOhKEaPZ8dx6M8C3Vah3_5fm9Md34",
@@ -58,7 +59,8 @@ export const firebaseConfig = {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BarcodeScanner,
-    MoneyServiceProvider
+    MoneyServiceProvider,
+    IncomeServiceProvider
   ]
 })
 export class AppModule {}
