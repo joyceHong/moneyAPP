@@ -29,14 +29,11 @@ export class IncomePage {
   sumIncome: Number;
   constructor(public navCtrl: NavController,public inComeService: IncomeServiceProvider) {
     this.obserItem= inComeService.list();
-    //this.dispot=this.obserItem;
     this.obserItem.subscribe(x=>{
       this.items=x;
       this.doSum(this.items);
-      console.log(this.items);
     });
 
-    
   }
 
 
@@ -56,6 +53,8 @@ export class IncomePage {
          return this.sumIncome = prev + Number(curr.revenue);
          } ,0);
   }
+
+  
 
   doDelete(itemId: any) {
     this.inComeService.remove(itemId);

@@ -24,18 +24,19 @@
     </ion-item>
   </ion-list>
   <button ion-button color="secondary" (click)="doClick(incomeDate,incomeMoney)"  large full round>儲存</button>
+  <br>
   <ion-list>
       <h1><font color=red>收入總額<input type="hidden" [(ngModel)]="sumIncome"> {{sumIncome}}</font></h1>
       <ion-item *ngFor="let subItem of items">
           <ion-row>
                   <ion-col col-lg-4>
-                     <font color=blue>{{subItem.value.revenueDate|date}}</font>
+                     <font color=blue>{{subItem.revenueDate|date}}</font>
                   </ion-col>
                   <ion-col col-lg-4>
-                  <font>{{subItem.value.revenue|currency}} </font>
+                  <font>{{subItem.revenue|currency}} </font>
                   </ion-col>
                   <ion-col col-lg-4>
-                          <button ion-button icon-right color="danger"  round (click)="doDelete(subItem.value.id)">
+                          <button ion-button icon-right color="danger"  round (click)="doDelete(subItem.id)">
                                           刪除 
                                   <ion-icon name="md-trash"></ion-icon>
                           </button>
